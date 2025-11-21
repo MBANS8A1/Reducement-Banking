@@ -41,27 +41,27 @@ function App() {
         </button>
       </p>
       <p>
-        <button onClick={() => {}} disabled={isActive}>
+        <button onClick={() => {}} disabled={!isActive}>
           Deposit £150
         </button>
       </p>
       <p>
-        <button onClick={() => {}} disabled={isActive}>
+        <button onClick={() => {}} disabled={!isActive}>
           Withdraw £50
         </button>
       </p>
       <p>
-        <button onClick={() => {}} disabled={isActive}>
+        <button onClick={() => {}} disabled={!isActive}>
           Request a loan of £5000
         </button>
       </p>
       <p>
-        <button onClick={() => {}} disabled={isActive}>
+        <button onClick={() => {}} disabled={!isActive}>
           Pay loan
         </button>
       </p>
       <p>
-        <button onClick={() => {}} disabled={isActive}>
+        <button onClick={() => {}} disabled={!isActive}>
           Close account
         </button>
       </p>
