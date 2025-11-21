@@ -6,7 +6,24 @@ const initialState = {
   isActive: false,
 };
 
-function reducer(state, action) {}
+function reducer(state, action) {
+  switch (action.type) {
+    case "openAccount":
+      return;
+    case "deposit":
+      return;
+    case "withdraw":
+      return;
+    case "requestLoan":
+      return;
+    case "payLoan":
+      return;
+    case "closeAccount":
+      return;
+    default:
+      throw new Error("Unknown action type!");
+  }
+}
 function App() {
   const [{ balance, loan, isActive }, dispatch] = useReducer(
     reducer,
