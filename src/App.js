@@ -1,10 +1,17 @@
+import { useReducer } from "react";
+
 const initialState = {
   balance: 0,
   loan: 0,
   isActive: false,
 };
 
+function reducer(state, action) {}
 function App() {
+  const [{ balance, loan, isActive }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
   return (
     <div className="App">
       <h1>Reducement Banking Account</h1>
