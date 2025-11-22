@@ -9,11 +9,11 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "openAccount":
-      return;
+      return { ...state, balance: 500, isActive: true };
     case "deposit":
-      return;
+      return { ...state, balance: state.balance + action.payload };
     case "withdraw":
-      return;
+      return { ...state, balance: state.balance - action.payload };
     case "requestLoan":
       return;
     case "payLoan":
@@ -36,17 +36,26 @@ function App() {
       <p>Loan: {loan}</p>
 
       <p>
-        <button onClick={() => {}} disabled={isActive}>
+        <button
+          onClick={() => dispatch({ type: "openAccount" })}
+          disabled={isActive}
+        >
           Open account
         </button>
       </p>
       <p>
-        <button onClick={() => {}} disabled={!isActive}>
+        <button
+          onClick={() => dispatch({ type: "deposit", payload: 150 })}
+          disabled={false}
+        >
           Deposit £150
         </button>
       </p>
       <p>
-        <button onClick={() => {}} disabled={!isActive}>
+        <button
+          onClick={() => dispatch({ type: "withdraw", payload: 50 })}
+          disabled={!isActive}
+        >
           Withdraw £50
         </button>
       </p>
