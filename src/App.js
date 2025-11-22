@@ -7,6 +7,7 @@ const initialState = {
 };
 
 function reducer(state, action) {
+  console.log(!state.isActive);
   if (!state.isActive && action.type !== "openAccount") return state;
 
   switch (action.type) {
@@ -48,7 +49,7 @@ function App() {
       <p>
         <button
           onClick={() => dispatch({ type: "deposit", payload: 150 })}
-          disabled={false}
+          disabled={!isActive}
         >
           Deposit £150
         </button>
